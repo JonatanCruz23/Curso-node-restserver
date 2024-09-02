@@ -70,12 +70,14 @@ const usuariosPut = async(req = request, res = response) => {
 // =====================METODO DELETE =======================
 const usuariosDelete = async(req, res = response) => {
     const {id} = req. params;
-    
+
     //ELIMINAR FISICAMENTE
   //  const usuario =  await Usuario.findByIdAndDelete(id);
   const usuario =  await Usuario.findByIdAndUpdate(id, {estado: false});
+ // const usuarioAutenticado = req.usuario
     res.json({
       usuario,
+   //   usuarioAutenticado
     })
 }
 
