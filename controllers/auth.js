@@ -47,6 +47,7 @@ const login = async (req, res = response) => {
     }
 }
 
+// CODIGO PARA REGISTRARSE MEDIANTE GOOGLE
 const googleSignIn = async(req, res = response) => {
 
     const {id_token} = req.body;
